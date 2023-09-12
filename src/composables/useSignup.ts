@@ -5,7 +5,6 @@ import { ref } from 'vue';
 const error = ref<string | null>(null);
 
 const signup = async (username: string, email: string, password: string) => {
-  console.log(auth, email, password);
   try {
     const response = await createUserWithEmailAndPassword(auth, email, password);
     if (!response) {
@@ -16,7 +15,6 @@ const signup = async (username: string, email: string, password: string) => {
     error.value = null;
     return response;
   } catch (err: any) {
-    console.error(err.message);
     error.value = err.message;
   }
 };
