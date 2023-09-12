@@ -21,8 +21,12 @@ module.exports = {
       {
         anonymous: 'never',
         named: 'never',
-        asyncArrow: 'never'
+        asyncArrow: 'always'
       }
-    ]
+    ],
+    'eol-last': ['error', 'always'],
+    semi: ['error', 'always'],
+    'array-bracket-spacing': ['error', 'never'],
+    '@typescript-eslint/no-explicit-any': 'off'
   }
-}
+};
