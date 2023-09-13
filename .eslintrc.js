@@ -13,7 +13,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['Welcome']
+        ignores: ['Welcome', 'Chatroom']
       }
     ],
     'space-before-function-paren': [
