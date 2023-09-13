@@ -1,19 +1,22 @@
 <template>
   <nav>
     <div>
-      <p>Hey there...</p>
-      <p class="email">Currently logged in as...</p>
+      <p>Hey there {{ currentUser.displayName }} </p>
+      <p class="email">Currently logged in as {{ currentUser.email }}</p>
     </div>
     <button @click="handleClick">Logout</button>
   </nav>
 </template>
 
 <script>
+import getUser from '@/composables/getUser';
 import useLogout from '@/composables/useLogout';
 
 export default {
   setup() {
     const { error, logout } = useLogout();
+    const { currentUser } = getUser();
+    console.log(currentUser);
 
     const handleClick = async () => {
       await logout();
@@ -23,7 +26,7 @@ export default {
     };
 
     return {
-      handleClick
+      handleClick, currentUser
     };
   }
 };
