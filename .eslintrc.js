@@ -13,7 +13,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['Welcome', 'Chatroom']
+        ignores: ['Welcome', 'Chatroom', 'Navbar']
       }
     ],
     'space-before-function-paren': [
@@ -27,6 +27,7 @@ module.exports = {
     'eol-last': ['error', 'always'],
     semi: ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
-    '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off',
+    indent: ['error', 2]
   }
 };
