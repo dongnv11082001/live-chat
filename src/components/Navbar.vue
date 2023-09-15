@@ -16,7 +16,6 @@ export default {
   setup() {
     const { logout } = useLogout();
     const { currentUser } = getUser();
-    console.log(currentUser);
 
     const handleClick = async () => {
       await logout();
