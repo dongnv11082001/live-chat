@@ -14,7 +14,6 @@ const getCollection = (path: string) => {
       results.push({ ...doc.data(), id: doc.id });
     });
     documents.value = results;
-    console.log(documents.value);
     error.value = null;
   });
 
