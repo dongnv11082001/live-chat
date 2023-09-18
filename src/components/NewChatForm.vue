@@ -22,8 +22,8 @@ export default {
         message: message.value,
         createdAt: Timestamp.fromDate(new Date())
       };
-      await addDoc(collection(db, 'messages'), chat);
       message.value = '';
+      await addDoc(collection(db, 'messages'), chat);
     };
 
     return { message, handleSubmit };
